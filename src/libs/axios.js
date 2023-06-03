@@ -1,22 +1,33 @@
 import axios from "axios";
-// import { useAuthStore } from "../store/auth";
 
-const baseURL =
-  process.env.NODE_ENV === "production"
-    ? process.env.DOMAIN
-    : "http://localhost:3004";
-
-const authApi = axios.create({
-  baseURL,
+const axiosClient = axios.create({
   withCredentials: true,
-});
+  baseURL: `${import.meta.env.VITE_API_BASE_URL}`,
+  headers: {
+    'X-Request-With': 'XMLHttpRequest',
+    'Content-Type': 'application/json',
+    Accept: 'application/json',
+  }
+})
 
-authApi.interceptors.request.use((config) => {
-/*   const token = useAuthStore.getState().token;
-  config.headers = {
-    Authorization: `Bearer ${token}`,
-  };
-  return config; */
-});
+axiosClient.interceptors.request.use((config) => {
+  //const token = localStorage.getItem('ACCESS_TOKEN');
+  //config.headers.Authorization = `Bearer ${token}`
+  return config;
+})
 
-export default authApi;
+axiosClient.interceptors.response.use((response) => {
+  return response
+}, (error) => {
+  const {response} = error;
+  if (response.status === 401) {
+    localStorage.removeItem('ACCESS_TOKEN')
+    // window.location.reload();
+  } else if (response.status === 404) {
+    //Show not found
+  }
+
+  throw error;
+})
+
+export default axiosClient

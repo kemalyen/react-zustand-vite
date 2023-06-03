@@ -1,12 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
-import { getAllMembers } from "../api/members";
+import { getMembersRequest } from "../api/members";
+import MemberCard from "./MemberCard";
 
 function MemberList() {
   const {
     data: members,
     isLoading,
     error,
-  } = useQuery(["members"], getAllMembers);
+  } = useQuery(["members"], getMembersRequest);
 
   if (isLoading) return <div>Loading...</div>;
 
@@ -25,7 +26,7 @@ function MemberList() {
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
       {members.map((member) => (
-         {member}
+         <MemberCard member={member} key={member._id} />
       ))}
     </div>
   );

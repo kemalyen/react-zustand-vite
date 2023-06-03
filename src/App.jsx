@@ -7,6 +7,7 @@ import BookPage from './pages/Book'
 import BookList from './pages/BookList'
 import Create from './pages/Create'
 import Edit from './pages/Edit'
+import Member from './pages/Member'
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import MemberList from './pages/MemberList'
@@ -31,6 +32,7 @@ function App() {
       <Route path='create' element={<Create />} />
       <Route path='edit/:id' element={<Edit />} />
       <Route path='members' element={<MemberList />} />
+      <Route path='members/:id' element={<Member />} />
       
     </Route>
   </Routes>
