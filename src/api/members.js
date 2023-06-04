@@ -7,10 +7,16 @@ export const getMembersRequest = async () => {
 
 export const getMemberRequest = async ({queryKey}) => {
   const [_, id] = queryKey
-  console.log(id)
-  const res = await axiosClient.get(`/data?_id=${id}`);
+  const res = await axiosClient.get(`/data/?id=${id}`);
   return res.data[0];
 };
+
+
+export const updateRequest = async (member) => {
+  const res = await axiosClient.put(`/data/${member.id}`, member);
+  return member;
+};
+
 
 /* 
 export const createNoteRequest = async (note: Note) => {
