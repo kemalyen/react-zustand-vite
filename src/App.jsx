@@ -1,5 +1,3 @@
-import { useState } from 'react'
- import {useBookStore} from './store'
 import './App.css'
 import Layout from './components/layout'
 import HomePage from './pages/HomePage'
@@ -16,9 +14,7 @@ import { Routes, Route } from 'react-router-dom';
 const queryClient = new QueryClient();
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  const bookStore = useBookStore( state => state.title)
+    
   return (
     <QueryClientProvider client={queryClient}>
     <Routes>
@@ -38,7 +34,7 @@ function App() {
       
     </Route>
   </Routes>
-  <ReactQueryDevtools initialIsOpen={false} />
+    <ReactQueryDevtools initialIsOpen={false} />
   </QueryClientProvider>
   )
 }

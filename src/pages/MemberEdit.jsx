@@ -47,17 +47,17 @@ function MemberEdit() {
 
     if (error) return <div>Error: {error.message} </div>;
 
-
+/* 
     useEffect(() => {
         return () => setUser(member)
     }, [member])
-
+ */
     const formik = useFormik({
         enableReinitialize: true,
         initialValues: {
-            id: user.id,
-            name: user.name,
-            email: user.email
+            id: member.id,
+            name: member.name,
+            email: member.email
         },
         validate,
         onSubmit: values => {

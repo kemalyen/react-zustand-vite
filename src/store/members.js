@@ -1,6 +1,4 @@
 import {create} from "zustand";
-import { getNotesRequest } from "../api/notes";
-import { Note } from "../types/Note.interface";
 
 /* type Store = {
   notes: Note[];

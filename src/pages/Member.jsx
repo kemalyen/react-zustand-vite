@@ -1,7 +1,7 @@
 
 import { getMemberRequest } from "../api/members";
 import MemberCard from "./MemberCard";
-import { useMutation, useQueryClient, useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 function Member() {
     let { id } = useParams();

@@ -2,8 +2,8 @@
   "data": [
     {
       "id": "647a006a04eb1dc195516f0e",
-      "name": "Lisa",
-      "email": "info@sendbox.uk"
+      "name": "Lisasme",
+      "email": "infos@sendbox.uk"
     },
     {
       "id": "647a006ac7f199a84dccd42d",
@@ -12,48 +12,8 @@
     },
     {
       "id": "647a006aa23caa0de6db489e",
-      "index": 2,
-      "guid": "9bb4fab8-8fde-4642-a69d-b97efabbb607",
-      "isActive": false,
-      "balance": "$3,626.26",
-      "picture": "http://placehold.it/32x32",
-      "age": 31,
-      "eyeColor": "green",
-      "name": "Barbara Dunlap",
-      "gender": "female",
-      "company": "MANUFACT",
-      "email": "barbaradunlap@manufact.com",
-      "phone": "+1 (956) 499-2900",
-      "address": "789 Seba Avenue, Madrid, South Carolina, 1399",
-      "about": "Qui consequat ea cillum irure aliquip id dolore culpa cupidatat minim voluptate voluptate labore labore. Ex eu pariatur tempor laboris officia nisi duis culpa occaecat tempor cupidatat. Pariatur mollit aliqua qui sunt. Nulla aliquip aute et ullamco eiusmod reprehenderit. Duis consectetur nisi incididunt proident sint. Voluptate tempor ut exercitation consequat consequat Lorem commodo pariatur aute. Consectetur ex ex sunt ad.\r\n",
-      "registered": "2017-06-10T05:00:10 -01:00",
-      "latitude": 21.846501,
-      "longitude": -96.656043,
-      "tags": [
-        "laboris",
-        "commodo",
-        "magna",
-        "adipisicing",
-        "esse",
-        "aliquip",
-        "ex"
-      ],
-      "friends": [
-        {
-          "id": 0,
-          "name": "Carpenter Santana"
-        },
-        {
-          "id": 1,
-          "name": "Boyd Bridges"
-        },
-        {
-          "id": 2,
-          "name": "Sandra Brady"
-        }
-      ],
-      "greeting": "Hello, Barbara Dunlap! You have 9 unread messages.",
-      "favoriteFruit": "banana"
+      "name": "Barbara Dunlaps",
+      "email": "barbaradunlap@manufact.com"
     },
     {
       "id": "647a006a21de07064f9b8dfe",
